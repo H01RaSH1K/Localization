@@ -1,10 +1,13 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-[CreateAssetMenu(fileName = "LocalizedTextSO", menuName = "Game/Localization/LocalizedTextSO")]
-public class LocalizedTextScriptableObject : ScriptableObject, ILocalizedText
+namespace Localization
 {
-    [SerializeField] private List<LocalizedTextEntry> _entries = new();
+    [CreateAssetMenu(fileName = "LocalizedTextSO", menuName = "Game/Localization/LocalizedTextSO")]
+    public class LocalizedTextScriptableObject : ScriptableObject, ILocalizedText
+    {
+        [SerializeField] private List<LocalizedTextEntry> _entries = new();
 
-    public IReadOnlyList<LocalizedTextEntry> Entries => _entries;
+        public IReadOnlyList<LocalizedTextEntry> Entries => _entries;
+    }
 }

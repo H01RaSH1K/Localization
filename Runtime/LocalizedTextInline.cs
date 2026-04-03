@@ -2,10 +2,13 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-[Serializable]
-public class LocalizedTextInline : ILocalizedText
+namespace Localization
 {
-    [SerializeField] private List<LocalizedTextEntry> _entries;
+    [Serializable]
+    public class LocalizedTextInline : ILocalizedText
+    {
+        [SerializeField] private List<LocalizedTextEntry> _entries;
 
-    public IReadOnlyList<LocalizedTextEntry> Entries => _entries;
+        public IReadOnlyList<LocalizedTextEntry> Entries => _entries;
+    }
 }

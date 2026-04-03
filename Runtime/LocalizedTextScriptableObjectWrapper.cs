@@ -2,16 +2,19 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 
-[Serializable]
-public class LocalizedTextScriptableObjectWrapper : ILocalizedText
+namespace Localization
 {
-    [SerializeField] private LocalizedTextScriptableObject _asset;
-
-    public LocalizedTextScriptableObjectWrapper(LocalizedTextScriptableObject asset)
+    [Serializable]
+    public class LocalizedTextScriptableObjectWrapper : ILocalizedText
     {
-        _asset = asset;
-    }
+        [SerializeField] private LocalizedTextScriptableObject _asset;
 
-    public IReadOnlyList<LocalizedTextEntry> Entries =>
-        _asset != null ? _asset.Entries : null;
+        public LocalizedTextScriptableObjectWrapper(LocalizedTextScriptableObject asset)
+        {
+            _asset = asset;
+        }
+
+        public IReadOnlyList<LocalizedTextEntry> Entries =>
+            _asset != null ? _asset.Entries : null;
+    }
 }

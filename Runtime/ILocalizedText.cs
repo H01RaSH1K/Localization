@@ -1,20 +1,23 @@
 using System.Collections.Generic;
 
-public interface ILocalizedText
+namespace Localization
 {
-    public IReadOnlyList<LocalizedTextEntry> Entries { get; }
-
-    public string GetText(string languageCode)
+    public interface ILocalizedText
     {
-        if (string.IsNullOrEmpty(languageCode))
-            return string.Empty;
+        public IReadOnlyList<LocalizedTextEntry> Entries { get; }
 
-        foreach (LocalizedTextEntry localizedText in Entries)
+        public string GetText(string languageCode)
         {
-            if (localizedText.LanguageCode == languageCode)
-                return localizedText.Text;
-        }
+            if (string.IsNullOrEmpty(languageCode))
+                return string.Empty;
 
-        return string.Empty;
+            foreach (LocalizedTextEntry localizedText in Entries)
+            {
+                if (localizedText.LanguageCode == languageCode)
+                    return localizedText.Text;
+            }
+
+            return string.Empty;
+        }
     }
 }
