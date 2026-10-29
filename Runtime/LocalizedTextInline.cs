@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Localization
+namespace Anhertis.Localization
 {
     [Serializable]
     public class LocalizedTextInline : ILocalizedText

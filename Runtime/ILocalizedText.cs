@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Localization
+namespace Anhertis.Localization
 {
     public interface ILocalizedText
     {

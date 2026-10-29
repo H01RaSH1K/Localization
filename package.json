@@ -1,6 +1,6 @@
 {
   "name": "com.anhertis.localization",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "displayName": "Localization",
   "unity": "2022.3",
   "dependencies": {

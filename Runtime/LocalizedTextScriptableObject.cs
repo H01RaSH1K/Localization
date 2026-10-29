@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-namespace Localization
+namespace Anhertis.Localization
 {
     [CreateAssetMenu(fileName = "LocalizedTextSO", menuName = "Game/Localization/LocalizedTextSO")]
     public class LocalizedTextScriptableObject : ScriptableObject, ILocalizedText

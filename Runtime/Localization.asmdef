@@ -1,6 +1,6 @@
 {
     "name": "Localization",
-    "rootNamespace": "Localization",
+    "rootNamespace": "Anhertis.Localization",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
